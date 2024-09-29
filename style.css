@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins'- sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    padding: 20px;
+    background:burlywood;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
