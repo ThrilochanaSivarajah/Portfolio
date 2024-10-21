@@ -9,55 +9,85 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: linear-gradient(rgb(60, 198, 145), rgb(252, 189, 200));
+    padding-top: 100px;
+    background-image: linear-gradient(to bottom right, rgb(1, 1, 1), rgb(218, 187, 241)40%, rgb(254, 253, 253) );
 }
 
 /* Layout */
+/* Style for the header */
 header {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px 0;
+    padding: 30px 0;
     text-align: center;
+    position: fixed; /* Makes the header stay at the top */
+    top: 0; /* Sticks to the top of the page */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
 
+/* Navbar list style */
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Reset margin to ensure alignment */
 }
 
+/* Navbar items */
 header nav ul li {
     display: inline;
     margin-right: 20px;
     line-height: 50px;
 }
 
+/* Navbar links */
 header nav ul li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-size: large;
 }
 
-header nav ul li :hover{
-    color: rgb(255, 0, 85);
+/* Hover effect for navbar links */
+header nav ul li:hover a {
+    color: rgb(255, 255, 255);
+}
+
+.name{
+    color: rgb(70, 70, 70);
+    font-size: medium;
+    font-family: "cursive", Brush Script MT;
+    position: fixed;
+    right: 10%;
+    top: 6%;
+    
+}
+
+/* Active state and hover effect */
+.active, .btn:hover {
+    color: #ffffff;
+
 }
 
 main {
-    padding: 20px;
+    padding-top: 100px;
     min-height: 60vh; /* Ensure the main content has some minimum height */
+}
+h2{
+    padding: 20px;
+    position:relative;
+}
+main ul li{
+    display: inline-block;
+    margin-right: 20px;
 }
 
 aside {
     line-height: 50px;
-    background-color: #333;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+footer p{
+    position: fixed;
+    bottom: 10px;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -65,7 +95,7 @@ footer ul li{
     display: inline-block;
     margin-right: 20px;
 }
-footer ul li a img:hover {
+main ul li a img:hover {
     filter: brightness(0.8); /* Darkens the image on hover */
     transform: scale(1.3); /* Slightly increases the size of the image on hover */
     transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
@@ -73,9 +103,75 @@ footer ul li a img:hover {
 
 .image img {
     width: 100%; /* Make the image responsive, fills the container */
-    max-width: 320px; /* Limit the maximum width of the image */
-    height: 310px; /* Maintain the aspect ratio */
-    float: right;
+    max-width: 420px; /* Limit the maximum width of the image */
+    height: 410px; /* Maintain the aspect ratio */
+    
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9)); /* Creates a blurred shadow effect */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1)90%, rgba(0, 0, 0, 0));
+    
+}
+
+.contact{
+    padding: 60px 20px 100px;
+}
+.contact_container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact_container .contact_form {
+    max-width: 65%;
+    width: 100%;
+}
+
+.contact_container .contact_form .field {
+    margin: 20px 0;
+}
+
+.contact_container .contact_form .field label {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.contact_container .contact_form .field input {
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact_container .contact_form textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.contact_container .contact_form .button {
+    display: block;
+    width: 100%;
+    padding: 8px 28px;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #047bd5; 
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.4s ease;
 }
 
 /* Responsive Design */
@@ -95,4 +191,24 @@ footer ul li a img:hover {
         bottom: 0;
         width: 100%;
     }
+}
+/* Typing Animation */
+.typing-animation {
+    font-family:'Serif', Garamond; /* Use a monospace font for the typing effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow:hidden; /* Hides the text as it "types" */
+    width: 31%;
+    animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 31%; } /* Change this percentage based on the text length */
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; } /* Adjust this color based on your theme */
 }
