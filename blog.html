@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html" class="btn active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="name">
-                <h2>Thrilochana.S</h2>
-            </div>
+    <header class="header">
+        <a href="#" class="logo">Thrilochana.S</a>
+
+        <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html"class="btn active">Blog</a>
+                <a href="contact.html">Contact</a>
         </nav>
     </header>
+    <section class="blog-section">
+        <div class="container">
+            <article class="blog-post">
+                <h2>Post Title 1</h2>
+                <a href="#" class="read-more">Read More</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus metus ut nisl malesuada, in commodo purus hendrerit.</p>
+            </article>
 
-    <main>
-        <article>
-            <h2>First Blog Post</h2>
-            <time datetime="2024-10-10">October 10, 2024</time>
-            <p>This is the content of my first blog post. I discuss my thoughts on web development.</p>
-        </article>
+            <article class="blog-post">
+                <h2>Post Title 2</h2>
+                <a href="#" class="read-more">Read More</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet nibh ut lacus luctus fermentum et id orci.</p>
+                
+            </article>
+        </div>
+    </section>
 
-        <article>
-            <h2>Second Blog Post</h2>
-            <time datetime="2024-10-11">October 11, 2024</time>
-            <p></p>
-        </article>
-    </main>
-
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 Thrilochana Sivarajah</p>
     </footer>

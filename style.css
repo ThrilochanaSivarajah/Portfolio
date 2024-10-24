@@ -1,13 +1,14 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,12 +21,14 @@
     align-items: center;
     z-index: 100;
 }
-.logo{
+
+.logo {
     font-size: 25px;
     color: #ffffff;
     font-weight: 600;
 }
-.navbar a{
+
+.navbar a {
     font-size: 18px;
     color: #ffffff;
     font-weight: 500;
@@ -33,256 +36,300 @@
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
+
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: orangered;
     border-bottom: 3px solid orangered;
 }
-.home{
+
+.home {
     width: 100%;
     min-height: 100vh;
-    background: rgb(241, 241, 241);
+    background: transparent; /* Remove the background color */
     display: flex;
     align-items: center;
     gap: 7em;
     padding: 30px 12% 0;
 }
-.home-content{
+
+.home-content {
     max-width: 800px;
 }
-.home-content h3{
-    font-size: 42px;
+
+.home-content h3 {
+    font-size: 32px; /* Reduced size */
 }
-.home-content h1{
-    font-size: 62px;
+
+.home-content h1 {
+    font-size: 32px; /* Reduced size */
     line-height: 1.2;
 }
-.home-content p{
+
+.home-content p {
     font-size: 18px;
     margin: 25px 0 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding-top: 100px;
-    background-image: linear-gradient(to bottom right, rgb(1, 1, 1), rgb(218, 187, 241)40%, rgb(254, 253, 253) );
+.social-media {
+    margin-top: 20px;
 }
 
-/* Layout */
-/* Style for the header */
-header {
-    padding: 30px 0;
-    text-align: center;
-    position: fixed; /* Makes the header stay at the top */
-    top: 0; /* Sticks to the top of the page */
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensures it stays on top of other elements */
-}
-
-/* Navbar list style */
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Reset margin to ensure alignment */
-}
-
-/* Navbar items */
-header nav ul li {
-    display: inline;
+.social-media a {
+    font-size: 28px;
+    color: #333;
     margin-right: 20px;
-    line-height: 50px;
+    transition: 0.3s;
 }
 
-/* Navbar links */
-header nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: large;
+.social-media a:hover {
+    color: orangered;
 }
 
-/* Hover effect for navbar links */
-header nav ul li:hover a {
-    color: rgb(255, 255, 255);
+.img-box img {
+    width: 400px; /* Adjust based on aspect ratio */
+    max-height: 550px; /* Set a maximum height */
+    border-radius: 10px;
+    object-fit:fill; /* Keep image proportions */
 }
 
-.name{
-    color: rgb(70, 70, 70);
-    font-size: medium;
-    font-family: "cursive", Brush Script MT;
-    position: fixed;
-    right: 10%;
-    top: 6%;
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        text-align: left;
+    }
     
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form {
+        width: 90%;
+    }
+}
+/* Contact Page Styling */
+.contact-section {
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-/* Active state and hover effect */
-.active, .btn:hover {
-    color: #ffffff;
-
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-main {
-    padding-top: 100px;
-    min-height: 60vh; /* Ensure the main content has some minimum height */
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
 }
-h2{
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    position:relative;
-}
-main ul li{
-    display: inline-block;
-    margin-right: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-aside {
-    line-height: 50px;
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: orangered;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 5%;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
 }
 
 footer p{
-    position: fixed;
-    bottom: 10px;
     text-align: center;
-    width: 100%;
+    font-size: medium;
+    background-color:black;
+    color: rgb(255, 255, 255);
 }
 
-footer ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-main ul li a img:hover {
-    filter: brightness(0.8); /* Darkens the image on hover */
-    transform: scale(1.3); /* Slightly increases the size of the image on hover */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
-}
-
-.image img {
-    width: 100%; /* Make the image responsive, fills the container */
-    max-width: 420px; /* Limit the maximum width of the image */
-    height: 410px; /* Maintain the aspect ratio */
-    
-    position: fixed;
-    top: 10%;
-    right: 10%;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9)); /* Creates a blurred shadow effect */
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1)90%, rgba(0, 0, 0, 0));
-    
-}
-
-.contact{
-    padding: 60px 20px 100px;
-}
-.contact_container {
+/* About Section Styling */
+.about-section {
+    padding: 50px 10%;
+    background-color: #f9f9f9;
     display: flex;
-    gap: 50px;
+    justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    gap: 50px;
 }
 
-.contact_container .contact_form {
-    max-width: 65%;
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-top: 100px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-img img {
     width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact_container .contact_form .field {
-    margin: 20px 0;
-}
-
-.contact_container .contact_form .field label {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.contact_container .contact_form .field input {
-    width: 100%;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.contact_container .contact_form textarea {
-    width: 100%;
-    height: 200px;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    resize: vertical;
-}
-
-.contact_container .contact_form .button {
-    display: block;
-    width: 100%;
-    padding: 8px 28px;
-    border: 2px solid transparent;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background: #047bd5; 
-    color: black;
-    font-size: 17px;
-    font-weight: 600;
-    transition: all 0.4s ease;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    body {
-        display: flex;
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
         flex-direction: column;
-        min-height: 100vh;
     }
 
-    main {
-        flex: 1;
+    .about-content h2 {
+        text-align: center;
     }
 
-    footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
+    .about-img {
+        max-width: 100%;
     }
 }
-/* Typing Animation */
-.typing-animation {
-    font-family:'Serif', Garamond; /* Use a monospace font for the typing effect */
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow:hidden; /* Hides the text as it "types" */
-    width: 31%;
-    animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
+.blog-section {
+    padding: 100px 12% 50px; /* Adjust padding to account for fixed header */
+    background-color: #f9f9f9;
 }
 
-/* Typing effect */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 31%; } /* Change this percentage based on the text length */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-/* Blinking cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; } /* Adjust this color based on your theme */
+.blog-post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-post .post-date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: orangered;
 }
