@@ -6,6 +6,11 @@
     text-decoration: none;
     list-style: none;
 }
+body {
+    background: linear-gradient( #ff7f50, #6495ed);
+    
+}
+    
 
 .header {
     position: fixed;
@@ -39,7 +44,6 @@
 .navbar a:hover,
 .navbar a.active {
     color: orangered;
-    border-bottom: 3px solid orangered;
 }
 
 .home {
@@ -50,6 +54,7 @@
     align-items: center;
     gap: 7em;
     padding: 30px 12% 0;
+
 }
 
 .home-content {
@@ -66,7 +71,7 @@
 }
 
 .home-content p {
-    font-size: 18px;
+    font-size: 20px;
     margin: 25px 0 30px;
 }
 
@@ -88,8 +93,10 @@
 .img-box img {
     width: 400px; /* Adjust based on aspect ratio */
     max-height: 550px; /* Set a maximum height */
-    border-radius: 10px;
+    border: 10px;
     object-fit:fill; /* Keep image proportions */
+    padding-top: 100px;
+
 }
 
 form {
@@ -138,20 +145,20 @@ button:hover {
 /* Contact Page Styling */
 .contact-section {
     padding: 50px 10%;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
 .contact-section h2 {
     font-size: 36px;
+    color: #000000;
     margin-bottom: 20px;
-    color: #333;
+    padding-top: 100px;
 }
 
 .contact-section p {
     font-size: 18px;
     margin-bottom: 40px;
-    color: #666;
+    color: #000000;
 }
 
 .contact-form {
@@ -218,7 +225,6 @@ button:hover {
 /* About Section Styling */
 .about-section {
     padding: 50px 10%;
-    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,7 +284,7 @@ button:hover {
 
 .blog-section {
     padding: 120px 10% 50px;
-    background-color: #f9f9f9;
+    
 }
 
 .blog-post {
@@ -290,8 +296,8 @@ button:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 1000px;
+    
 }
-
 
 .blog-post:hover {
     transform: translateY(-5px);
@@ -312,7 +318,6 @@ button:hover {
 
 /* Read More Button Styling */
 
-
 .modal {
     display: none; /* Hide modals by default */
     position: fixed;
@@ -329,10 +334,10 @@ button:hover {
 
 .modal:target {
     display: flex; /* Show modal when targeted */
+
 }
 
 .modal-content {
-    background-color: #ffffff;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
@@ -340,10 +345,6 @@ button:hover {
     width: 90%;
     position: relative;
 }
-
-
-
-
 
 .modal-page {
     max-width: 800px;
@@ -365,15 +366,6 @@ button:hover {
     border-radius: 8px;
     margin: 20px 0;
 }
-
-
-
-
-
-
-
-
-
 
 .close {
     position: absolute;
