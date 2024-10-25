@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -216,13 +215,6 @@ button:hover {
     }
 }
 
-footer p{
-    text-align: center;
-    font-size: medium;
-    background-color:black;
-    color: rgb(255, 255, 255);
-}
-
 /* About Section Styling */
 .about-section {
     padding: 50px 10%;
@@ -283,22 +275,27 @@ footer p{
         max-width: 100%;
     }
 }
+
 .blog-section {
-    padding: 100px 12% 50px; /* Adjust padding to account for fixed header */
+    padding: 120px 10% 50px;
     background-color: #f9f9f9;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.blog-post {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 1000px;
 }
 
-.blog-post {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .blog-post h2 {
@@ -307,29 +304,93 @@ footer p{
     margin-bottom: 10px;
 }
 
-.blog-post .post-date {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 15px;
-}
-
 .blog-post p {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
 }
 
-.read-more {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+/* Read More Button Styling */
+
+
+.modal {
+    display: none; /* Hide modals by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.read-more:hover {
-    background-color: orangered;
+.modal:target {
+    display: flex; /* Show modal when targeted */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+
+
+
+
+.modal-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.modal-page p{
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: #000;
+}
+
+footer {
+   background-color:black; 
+   color:white; 
+   text-align:center; 
+   padding:20px; 
 }
