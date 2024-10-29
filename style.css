@@ -321,13 +321,12 @@ button:hover {
 .modal {
     display: none; /* Hide modals by default */
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    overflow: auto;
     align-items: center;
     justify-content: center;
 }
@@ -338,7 +337,7 @@ button:hover {
 }
 
 .modal-content {
-    margin: auto;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -366,6 +365,7 @@ button:hover {
     border-radius: 8px;
     margin: 20px 0;
 }
+
 
 .close {
     position: absolute;
