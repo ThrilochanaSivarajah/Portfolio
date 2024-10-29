@@ -7,10 +7,8 @@
     list-style: none;
 }
 body {
-    background: linear-gradient( #ff7f50, #6495ed);
-    
+    background: linear-gradient( #ff7f50, #6495ed); 
 }
-    
 
 .header {
     position: fixed;
@@ -96,7 +94,6 @@ body {
     border: 10px;
     object-fit:fill; /* Keep image proportions */
     padding-top: 100px;
-
 }
 
 form {
@@ -344,14 +341,10 @@ button:hover {
     width: 90%;
     position: relative;
 }
-
 .modal-page {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 177px auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 .modal-page p{
